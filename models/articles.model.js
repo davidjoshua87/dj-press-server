@@ -7,6 +7,10 @@ const articlesSchema = new Schema({
   },
   title: String,
   content: String,
+  pic: {
+		type: String,
+		default: 'https://jnaengineering.co.za/images/no_product.png'
+	},
   category: String,
   comments: [{
     comments: String

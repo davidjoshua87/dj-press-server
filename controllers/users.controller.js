@@ -18,9 +18,9 @@ module.exports = {
         console.log(req.body.username)
         console.log(req.body.email)
         console.log(userData)
-        if(userData) {
+        if (userData) {
           let passwordCheck = bcrypt.compareSync(req.body.password, userData.password)
-          if(passwordCheck) {
+          if (passwordCheck) {
             let token = jwt.sign({
                 id: userData._id
               },
@@ -61,7 +61,6 @@ module.exports = {
         password: req.body.password,
       })
       .then(data => {
-        console.log(data, '====woiiii');
         let token = jwt.sign({
           id: data._id
         }, 'secret');

@@ -13,6 +13,13 @@ Untuk membuat artikel baru dan mengedit artikel yang sudah dipublikasikan dapat 
 
 ## API Endpoint
 
+List of basic routes user:
+
+|Route | HTTP | Description|
+|------|------|------------|
+|'/users/signin'| POST | user sign in into the application |
+|'/users/signup'| POST | user sign up for get account |
+
 List of basic routes article:
 
 |Route | HTTP | Description|
@@ -22,16 +29,10 @@ List of basic routes article:
 |'/articles'| POST | input a new articles into database |
 |'/articles/:id'| PUT | add comment to articles |
 |'/articles/edit/:id'| PUT | edit a significant articles |
-
 |'/articles/:id'| DELETE | delete a significant articles |
 |'/articles/:category'| GET | getting all articles with significant category|
 |'/articles/:author'| GET | getting all articles with significant author|
 |'/articles/:title'| GET | getting all articles with significant title|
 
 
-List of basic routes user:
 
-|Route | HTTP | Description|
-|------|------|------------|
-|'/users/signin'| POST | user sign in into the application |
-|'/users/signup'| POST | user sign up for get account |

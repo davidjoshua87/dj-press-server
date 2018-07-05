@@ -72,7 +72,8 @@ module.exports = {
         title: req.body.title,
         author: req.body.author,
         content: req.body.content,
-        category: req.body.category
+        category: req.body.category,
+        pic: req.file.cloudStoragePublicUrl
       })
       .then(response => {
         return res.status(200).json({
