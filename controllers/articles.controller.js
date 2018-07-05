@@ -70,7 +70,6 @@ module.exports = {
     Articles
       .create({
         title: req.body.title,
-        author: req.body.author,
         content: req.body.content,
         category: req.body.category,
         pic: req.file.cloudStoragePublicUrl
