@@ -1,4 +1,10 @@
 const Articles = require('../models/articles.model');
+const Storage  = require('@google-cloud/storage')
+const storage  = new Storage({
+	projectId: process.env.GCLOUD_PROJECT,
+	keyFilename: process.env.KEYFILE_PATH
+})
+const bucket = storage.bucket(process.env.CLOUD_BUCKET)
 
 module.exports = {
   searchArticle:(req, res) =>{
@@ -134,6 +140,8 @@ module.exports = {
         _id: req.params.id
       })
       .then(response => {
+        let fileName = response.link.substr(response.link.lastIndexOf('/') + 1)
+        bucket.file(fileName).delete()
         return res.status(200).json({
           message: "successfully deleted articles"
         })

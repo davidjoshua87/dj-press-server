@@ -16,7 +16,7 @@ const articlesRouter = require('./routes/articles');
 const usermongo = process.env.USERMONGO
 const passmongo = process.env.PASSMONGO
 const mongoose  = require('mongoose');
-const dbUrl     = `mongodb://${usermongo}:${passmongo}@ds117540.mlab.com:17540/blog-tdd`;
+const dbUrl     = `mongodb://${usermongo}:${passmongo}@ds125381.mlab.com:25381/dj-press`;
 mongoose.connect(dbUrl, (err) => {
   if(!err) {
     console.log('success connected to database');
